@@ -4,8 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script 
+            src="https://kit.fontawesome.com/b3b13722e3.js" 
+            crossorigin="anonymous"
+    ></script>
+    <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap"
+        rel="stylesheet">
+    <link 
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap" 
+            rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fugaz+One&family=Protest+Riot&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bungee&family=Fugaz+One&family=Hahmlet:wght@100..900&family=Protest+Riot&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bungee&family=Fugaz+One&family=Hahmlet:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Protest+Riot&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bungee&family=Fugaz+One&family=Protest+Riot&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    blah...blah...
+    
+    <div class="mainPage">
+        <nav class="navbar">
+            <div class="contents">
+                <div id="logo">
+                    euzn
+                </div>
+        
+                <ul id="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About ME</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <hr/>
+        </nav>
+        <div class="prf__background">
+            <div class="profile">
+                <div class="title">
+                    <div id="intro__title">
+                        Welcome!
+                    </div>  
+                    <div id="sub__title">Full-Stack Developer</div>
+                </div>
+                <div class="info">
+                    <div class="backCircle"></div>
+                    <img src="profile_image.png" alt="">
+                    <ul id="details">
+                        <div class="name">
+                            <i class="fa-solid fa-user"></i>
+                            <li>이유진</li>
+                        </div>
+                        <div class="birth">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <li>1998.11.23</li>
+                        </div>
+                        <div class="mail">
+                            <i class="fa-solid fa-envelope"></i>
+                            <li>dldbwls6763@gmail.com</li>
+                        </div>
+                        <div class="gradu">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <li>충북대학교<br>&#40;국어국문학과, 소프트웨어학과&#41;</li>
+                        </div>
+                    </ul>
+                </div>
+                <div id="blank"></div>
+                <div class="self__pr">
+                    <div class="wrapper"><h1 id="first">안녕하세요!</h1></div>
+                    <div class="wrapper"><h1 id="second">안낭나앙나안안아아낭ㄴ나안안안안안안아ㄴㄴ</h1></div>
+                    <div class="wrapper"><h1 id="third">안낭나앙나안안아아낭ㄴ나안안안안안안아ㄴㄴ</h1></div>
+                    <div class="wrapper"><h1 id="forth">안낭나앙나안안아아낭ㄴ나안안안안안안아ㄴㄴ</h1></div>
+                    <div class="wrapper"><h1 id="fifth">안낭나앙나안안아아낭ㄴ나안안안안안안아ㄴㄴ</h1></div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="slider">
+        <div class="blank"></div>
+        <div class="arrow__wrapper">
+            <div class="arrows">
+                <a href="#" title="Previous" class="arrow slider__link prev"></a>
+                <a href="#" title="Next" class="arrow slider__link next"></a>
+            </div>
+        </div>
+        <div class="slider__wrapper flex">
+            <div class="slide flex">
+                <div class="imgAndAnnounce">
+                    <div class="slide__image prev fir__img"><img src="project_img/RPG/halloween_main.png"><div class="overlay"></div></div>
+                <div class="announce">사진을 클릭해 주요기능을 확인해보세요.</div>
+                </div>
+                
+                <div class="slide__content">
+                    <span>
+                        <div class="tools">
+                            <img src="project_img/RPG/tools/unity.png" alt="">
+                            <img src="project_img/RPG/tools/c_sh.png" alt="">
+                            <img src="project_img/RPG/tools/appscript.png" alt="">
+                            <img src="project_img/RPG/tools/js.png" alt="">
+                        </div>
+                        <i class="fa-solid fa-user people"></i>
+                        <div id="num">9</div>
+                    </span>
+                    
+                    <div class="slide__date">2021.08.23 - 2021.10.29</div>
+                    <div class="slide__title fir__project">핼러윈 방 탈출 RPG</div>
+                    <div class="slide__text fir__text">목적: 비대면 상황에서도 자유도가 높은 학생회 행사를 제공하기 위해 제작.
+                        <br>
+                        기획: 개발이 완료되는 시점인 10월 말의 '핼러윈 데이'를 기반으로 시나리오 작업.
+                        <br>
+                        역할: 시나리오, 퀴즈, UI 디자인 외 게임 기능 구현.
+                    </div>
+                    <a href="https://github.com/E-Yujin/CampusEscape" target = "링크 방법"><i class="fa-brands fa-square-github slide__more"></i></a>
+                </div>	
+            </div>
+            <div class="slide flex">
+                <div class="imgAndAnnounce">
+                    <div class="slide__image prev second__img"><img src="project_img/dementia/main.png"><div class="overlay"></div></div>
+                <div class="announce">사진을 클릭해 주요기능을 확인해보세요.</div>
+                </div>
+                
+                <div class="slide__content">
+                    <span>
+                        <div class="tools">
+                            <img src="project_img/dementia/tools/android.png" alt="">
+                            <img src="project_img/dementia/tools/java.png" alt="">
+                            <img src="project_img/dementia/tools/xml.png" alt="">
+                            <img src="project_img/dementia/tools/SQLite.png" alt="">
+                        </div>
+                        <i class="fa-solid fa-user people"></i>
+                        <div id="num">2</div>
+                    </span>
+                    
+                    <div class="slide__date">2021.09.03 - 2022.11.18</div>
+                    <div class="slide__title second__project">기억돔</div>
+                    <div class="slide__text second__text">목적: 치매 검사를 주기적으로 시행해 치매를 예방 또는 진행을 더디게 함.
+                        <br>
+                        기획: CIST(인지선별검사) 진단 척도를 사용해 인증된 검사 품질을 제공.
+                        <br>
+                        역할: TTS 및 STT 구현, 캐릭터 디자인 및 애니메이팅, 대화형 AI 구현, 정규 검사 및 간이 검사 일부 구현, 주변 치매 센터 및 병원 탐색 구현.
+                    </div>
+                    <a href="https://github.com/E-Yujin/CampusEscape" target = "링크 방법"><i class="fa-brands fa-square-github slide__more"></i></a>
+                </div>	
+            </div>
+            <div class="slide flex">
+                <div class="slide__image next"><img src="https://goranvrban.com/codepen/img5.jpg"><div class="overlay"></div></div>
+                <div class="slide__content">
+                    <div class="slide__date">30.09.2017.</div>
+                    <div class="slide__title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+                    <div class="slide__text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+                    <div class="slide__more">READ MORE</div>
+                </div>	
+            </div>
+        </div>
+        
+        </div>
+    
+    <script src="main.js" defer></script>
 </body>
 </html>
