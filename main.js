@@ -41,8 +41,25 @@ let fir_detailBtn = s.find(".fir__img");
 let scd_detailBtn = s.find(".second__img");
 
 let clickCnt = 0;
+let clickCount = 0;
 
 let index = 0;
+
+
+$(document).ready(function(){
+	let pjBtn = $('.proj__btn'),
+	abBtn = $('.about__btn');
+
+	abBtn.on("click", function(e){
+		e.preventDefault();
+		$('html, body').animate({ scrollTop : 0}, 350);
+	})
+
+	pjBtn.on("click", function(e){
+		e.preventDefault();
+		$('html, body').animate({ scrollTop : $('.slider').offset().top}, 350);
+	})
+});
 
 setInterval(function() {
 	$("#intro__title").text(text[index]);
@@ -101,7 +118,7 @@ $(document).ready(function () {
 	sWrapper.css("width", sTotalWidth);
 	sWrapper.css("width", sTotalWidth);
 	
-	let clickCount = 0;
+	
 	
 	btn.on("click", function (e) {
 		e.preventDefault();
@@ -111,7 +128,7 @@ $(document).ready(function () {
 		} else if ($(this).hasClass("prev")) {
 			clickCount > 0 ? clickCount-- : (clickCount = sCount - 1);
 		}
-		TweenMax.to(sWrapper, 0.4, { x: "-" + sWidth * clickCount });
+		TweenMax.to(sWrapper, 0.4, { x: "-" + $('.slide').innerWidth() * clickCount });
 
 	//CONTENT ANIMATIONS
 	
@@ -136,7 +153,6 @@ $(document).ready(function () {
 		clickCnt = 0;
 	})
 
-
 	fir_detailBtn.on("click", function (e) {
 		e.preventDefault();
 		nextInfo(".fir__project", ".fir__text", ".fir__img img", 
@@ -148,6 +164,16 @@ $(document).ready(function () {
 		nextInfo(".second__project", ".second__text", ".second__img img", 
 		sc_titles, sc_texts, sc_imgs, 6);
 	})
+});
+
+let delay = 1000;
+let timer = null;
+
+$(window).on('resize',  function(){
+	timer = setTimeout(function(){
+		console.log($('.slide').width());
+		TweenMax.to(sWrapper, 0.4, { x: "-" + $('.slide').innerWidth() * clickCount });
+	}, delay);
 });
 
 function nextInfo(e_title, e_txt, e_img, a_title, a_txt, a_img, cnt) {

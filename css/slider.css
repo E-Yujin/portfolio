@@ -1,11 +1,28 @@
+:root {
+    --white: #f0f4f5;
+    --black: #000000;
+    --navy: #000a38;
+    --bright-blue: #b8c3f5;
+}
+
 .flex {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
+.proj__title{
+    color: var(--white);
+    font-family: var(--intro-title-font);
+    font-size: var(--intro-title-size);
+}
+
 .blank{
     width: max(100px, 11vw);
+}
+
+.slide{
+    height: max-content;
 }
 
 .slider__wrapper div {
@@ -14,10 +31,11 @@
 .slider__wrapper {
     padding: 5vh 0vw;
     margin: 5vh 0vw;
-
     position: relative;
+    height: max-content;
 }
 .slide__image {
+    width: max(300px, 24vw);;
     height: max(300px, 24vw);
 }
 .slide__image img {
@@ -28,7 +46,7 @@
 }
 .slide__content {
     width: max(350px, 27vw);
-    height: max(350px, 20vw);
+    height: max-content;
     color: #fff;
     padding: max(0px, 0vw) max(180px, 18vw) max(0px, 0vw) max(90px, 9vw);
     position: relative;
@@ -108,22 +126,23 @@ div.overlay__blue:hover {
 }
 
 .arrows {
-    width: max(40px, 3.5vw);
+    display: flex;
+    width: max(80px, 3.5vw);
     position: absolute;
     padding-right: max(100px, 10vw);
     left: max(800px, 70vw);
-    padding-top: max(130px, 10vw);
+    padding-top: max(200px, 10vw);
     z-index: 1;
 }
 
 .arrow {
     display: inline-block;
-    width: max(12px, 1.2vw);
-    height: max(12px, 1.2vw);
+    width: max(20px, 1.2vw);
+    height: max(20px, 1.2vw);
     background: transparent;
     text-indent: -9999px;
-    border-top: max(1.5px, 0.15vw) solid #fff;
-    border-left: max(1.5px, 0.15vw) solid #fff;
+    border-top: max(2px, 0.15vw) solid #fff;
+    border-left: max(2px, 0.15vw) solid #fff;
     transition: all 0.1s ease-in-out;
     text-decoration: none;
     color: transparent;
@@ -150,6 +169,49 @@ div.overlay__blue:hover {
     right: 0;
 }
 
-@media screen and (max-width: 650px) {
 
+@media screen and (max-width: 950px) {
+    .slide{
+        flex-direction: column;
+        padding-right: 150px;
+    }
+    
+    .slider__wrapper {
+        padding: 0vh 0vw;
+        margin: 0vh 0vw;
+
+        height: max-content;
+    }
+    .slider{
+        height: max-content;
+    }
+    .arrows{
+        left: 50px;
+        padding-top: 50px;
+        padding-right: 0vw;
+        width: min(600px, 82vw);
+    }
+
+    .arrow__blank{
+        width: max(500px, 78vw);
+    }
+
+    .arrow{
+        width: 20px;
+        height: 20px;
+    }
+
+    .slide__content {
+        width: max(350px, 27vw);
+        height: max-content;
+        padding: 0;
+    }
+
+    .blank{
+        width: 23vw;
+    }
+
+    .imgAndAnnounce{
+        padding-bottom: 50px;
+    }
 }

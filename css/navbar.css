@@ -36,7 +36,8 @@
 
 .navbar .contents #menu li :hover{
     background-color: var(--navy);
-    border-radius: 4px;
+    border-radius: 15px;
+    padding: 6px;
 }
 
 hr {

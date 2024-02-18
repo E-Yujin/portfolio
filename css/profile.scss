@@ -1,3 +1,13 @@
+:root {
+    --intro-title-size: max(80px, 5vw);
+    --intro-sub-title-size: max(17px, 1.2vw);
+    --intro-info-size: max(14px, 0.8vw);
+    --logo-font: 'Protest Riot';
+    --default-font:'Noto Sans KR';
+    --intro-title-font:'Fugaz One';
+    --intro-sub-title-font: 'Noto Sans KR';
+}
+
 .profile {
     display: flex;
     justify-content: center;
@@ -85,14 +95,13 @@
     font-size: var(--intro-sub-title-size);
     font-style: normal;
     font-weight: 900;
-    text-decoration: underline;
 }
 
 .info{
-    min-width: 300px;
+    min-width: 400px;
     width: 30vw;
     height: 30vw;
-    min-height: 300px;
+    min-height: 400px;
     
     position: relative;
     display: flex;
@@ -101,11 +110,10 @@
 }
 
 .info .backCircle{
-    min-width: 300px;
+    min-width: 400px;
     width: 30vw;
     height: 30vw;
-    min-height: 300px;
-    margin-top: 0px;
+    min-height: 400px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius:  70% 70% 70% 0px;
     position: absolute;
@@ -129,25 +137,25 @@
     list-style: none;
     position: absolute;
     left: 0px;
-    padding-left: max(150px, 15vw);
+    padding-left: max(200px, 15vw);
     float: right;
 }
 
 .info div{
-    min-width: 200px;
+    min-width: 300px;
     width: 20vw;
     display: flex;
     align-items: center;
     background-color: var(--navy);
     border-radius: 100px;
-    margin-top: max(7px, 0.8vw);
+    margin-top: max(8px, 0.8vw);
     word-break:break-all;
 }
 
 #details i{
-    font-size: max(13px, 1.2vw);
-    padding-right: max(13px, 1.3vw);
-    padding-left: max(13px, 1.3vw);
+    font-size: max(18px, 1.2vw);
+    padding-right: max(15px, 1.3vw);
+    padding-left: max(20px, 1.3vw);
     color: var(--white);
 }
 
@@ -183,7 +191,7 @@
 }
 
 .self__pr h1 {
-    font-size: max(13px, 1.2vw);
+    font-size: max(15px, 1.2vw);
     font-family: var(--default-font);
     font-weight: 1200;
     width: max(250px, 23vw);
@@ -197,24 +205,28 @@
 }
 
 #first{
-    width: max(70px, 6vw);
+    width: max(80px, 6vw);
     visibility: visible;
     animation: typing 0.3s steps(6) alternate;
 }
 
 #second{
+    
     animation: typing 1s 0.3s steps(21) alternate;
 }
 
 #third{
+    width: max(330px, 27vw);
     animation: typing 1s 1.3s steps(21) alternate;
 }
 
 #forth{
+    width: max(330px, 27vw);
     animation: typing 1s 2.3s steps(21) alternate;
 }
 
 #fifth{
+    width: max(340px, 27.3vw);
     border-right: 3px solid;
     animation: typing 1s 3.3s steps(21), blink .5s step-end infinite alternate;
     animation-fill-mode : forwards;
@@ -232,10 +244,13 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
+    .title{
+        top: 120px;
+    }
     .profile{
         height: 730px;
-        margin-top: 100px;
+        margin-top: 150px;
         flex-direction: column;
         align-items: center;
     }
