@@ -1,7 +1,7 @@
 :root {
-    --intro-title-size: max(80px, 5vw);
-    --intro-sub-title-size: max(17px, 1.2vw);
-    --intro-info-size: max(14px, 0.8vw);
+    --intro-title-size: max(60px, 5vw);
+    --intro-sub-title-size: max(16px, 1.2vw);
+    --intro-info-size: max(12px, 0.8vw);
     --logo-font: 'Protest Riot';
     --default-font:'Noto Sans KR';
     --intro-title-font:'Fugaz One';
@@ -98,10 +98,10 @@
 }
 
 .info{
-    min-width: 400px;
+    min-width: 350px;
     width: 30vw;
     height: 30vw;
-    min-height: 400px;
+    min-height: 350px;
     
     position: relative;
     display: flex;
@@ -110,10 +110,10 @@
 }
 
 .info .backCircle{
-    min-width: 400px;
+    min-width: 350px;
     width: 30vw;
     height: 30vw;
-    min-height: 400px;
+    min-height: 350px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius:  70% 70% 70% 0px;
     position: absolute;
@@ -137,7 +137,7 @@
     list-style: none;
     position: absolute;
     left: 0px;
-    padding-left: max(200px, 15vw);
+    padding-left: max(150px, 15vw);
     float: right;
 }
 
@@ -148,14 +148,14 @@
     align-items: center;
     background-color: var(--navy);
     border-radius: 100px;
-    margin-top: max(8px, 0.8vw);
+    margin-top: max(5px, 0.8vw);
     word-break:break-all;
 }
 
 #details i{
-    font-size: max(18px, 1.2vw);
-    padding-right: max(15px, 1.3vw);
-    padding-left: max(20px, 1.3vw);
+    font-size: max(15px, 1.2vw);
+    padding-right: max(13px, 1.3vw);
+    padding-left: max(17px, 1.3vw);
     color: var(--white);
 }
 
@@ -191,10 +191,10 @@
 }
 
 .self__pr h1 {
-    font-size: max(15px, 1.2vw);
+    font-size: max(13px, 1.2vw);
     font-family: var(--default-font);
     font-weight: 1200;
-    width: max(250px, 23vw);
+    width: max(220px, 23vw);
     white-space: nowrap;
     visibility: hidden;
     overflow: hidden;
@@ -205,7 +205,7 @@
 }
 
 #first{
-    width: max(80px, 6vw);
+    width: max(75px, 6vw);
     visibility: visible;
     animation: typing 0.3s steps(6) alternate;
 }
@@ -216,17 +216,17 @@
 }
 
 #third{
-    width: max(330px, 27vw);
+    width: max(280px, 27vw);
     animation: typing 1s 1.3s steps(21) alternate;
 }
 
 #forth{
-    width: max(330px, 27vw);
+    width: max(280px, 27vw);
     animation: typing 1s 2.3s steps(21) alternate;
 }
 
 #fifth{
-    width: max(340px, 27.3vw);
+    width: max(295px, 27.3vw);
     border-right: 3px solid;
     animation: typing 1s 3.3s steps(21), blink .5s step-end infinite alternate;
     animation-fill-mode : forwards;
@@ -261,5 +261,21 @@
 
     #blank{
         display: none;
+    }
+}
+
+@media screen and (max-height: 750px){
+    .profile{
+        height: 600px;
+        margin-top: 0px;
+        flex-direction: row;
+        align-items: center;
+    }
+    #blank{
+        display: block;
+    }
+
+    .title{
+        top: 75px;
     }
 }

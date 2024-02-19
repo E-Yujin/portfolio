@@ -15,6 +15,7 @@
     color: var(--white);
     font-family: var(--intro-title-font);
     font-size: var(--intro-title-size);
+    width: 100vw;
 }
 
 .blank{
@@ -105,7 +106,6 @@
 .slide__more{
     font-size: max(35px, 2vw);
     padding: 0;
-
 }
 
 .announce{
@@ -204,13 +204,121 @@ div.overlay__blue:hover {
         width: max(350px, 27vw);
         height: max-content;
         padding: 0;
+        padding-bottom: 30px;
     }
 
     .blank{
-        width: 23vw;
+        width: 16vw;
     }
 
     .imgAndAnnounce{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-bottom: 50px;
+    }
+
+    .proj__title{
+        margin: 150px 0px;
+    }
+}
+@media screen and (max-width: 400px) {
+
+    .arrows{
+        left: 50px;
+        padding-top: 50px;
+        padding-right: 0vw;
+        width: min(600px, 82vw);
+    }
+    .blank{
+        width: 16vw;
+    }
+
+    .slide__content {
+        width: 300px;
+        height: max-content;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-height: 600px){
+    .proj__title{
+        margin-bottom: 100px;
+    }
+    .slide{
+        flex-direction: row;
+        padding-right: 150px;
+    }
+    .arrows{
+        left: 50px;
+        padding-top: 130px;
+        padding-right: 0vw;
+        width: 650px;
+    }
+
+    .arrow__blank{
+        width: 650px;
+    }
+
+    .blank{
+        width: 9vw;
+    }
+
+    .slide__content {
+        padding-left: 5vw;
+        padding-bottom: 0;
+    }
+
+    .slide__image, .slide__image img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .imgAndAnnounce{
+        justify-content: center;
+        padding-bottom: 0px;
+    }
+
+    .slide__title{
+        font-size: 20px;
+    }
+
+    .slide__text{
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    .slide__date{
+        font-size: 18px;
+    }
+    
+    .slide__content .people{
+        font-size: 15px;
+    }
+    
+    .slide__content #num{
+        font-size: 18px;
+    }
+    
+    .tools{
+        width: 180px;
+        border-radius: 50px;
+        padding: 6px 15px;
+        margin: 7px 0vw;
+    }
+    
+    .tools img{
+        height: max(22px, 2vw);
+    }
+    
+    .slide__more{
+        font-size: 30px;
+        padding: 0;
+    }
+
+    .announce{
+        font-size: 12px;
     }
 }
